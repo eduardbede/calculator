@@ -1,0 +1,78 @@
+body{
+    background-color: bisque;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(5, 100px);
+}
+
+
+.container > button{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+.container>button{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.container>button:hover{background-color: #3e8e41}
+
+
+.display{
+   
+    border: 1px solid black;
+    width: 400px;
+    height: 100px;
+    font-size: xxx-large;
+    text-align: end;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+#screen{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+
+footer{
+    margin-top: 6em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 21px;
+    letter-spacing: 0.6px;
+    word-spacing: 0.8px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: small-caps;
+  }
+  
+  #an{
+    margin-right: 10px;
+  }
+
+  header{
+    font-family: Amita, cursive;
+    text-align: center;
+    font-size: 59px;
+    letter-spacing: 7px;
+    word-spacing: 16px;
+    color: rgb(8, 8, 8);
+    text-shadow: rgba(253, 144, 144, 0.95) 2px 2px 2px;
+    margin-bottom: 30px;
+}
+a:link{
+    text-decoration: none;
+}
