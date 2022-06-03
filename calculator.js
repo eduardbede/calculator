@@ -6,9 +6,14 @@ const clear = document.querySelector('.clear');
 const delLast = document.querySelector('.delLast');
 const operand = document.querySelectorAll('.operand');
 const punctBtn = document.querySelector('.punctBtn');
+
+const date = new Date();
+let year = date.getFullYear();
+const an = document.getElementById("an").textContent = year + " @eduardbede ";
+
 let res = "";
 
-console.log(typeof display)
+
 btnNr.forEach(e=>{
   e.addEventListener("click", ()=>{
     if(display.value == "0"){
@@ -16,11 +21,8 @@ btnNr.forEach(e=>{
   };
   display.value += e.value;
   res += e.value;
-        console.log(res);
   });
 });
-
-
 
 operand.forEach(evt=>{
   evt.addEventListener('click', ()=>{
@@ -34,35 +36,27 @@ operand.forEach(evt=>{
    
  });
 });
-    
-
 function result(){
 
-btnEqual.addEventListener('click', ()=>{
-  display.value = numeral(math.evaluate(display.value)).format('0[.][0000000]'); 
- if(res.slice(-1).includes(".")){
- res = res.slice(0, -1);
- };
+  btnEqual.addEventListener('click', ()=>{
+   if(res.slice(-1).includes(".")){
+     res = "0";
+ } display.value = numeral(math.evaluate(display.value)).format('0[.][0000000]'); 
 });
 };
 result();
-
 
 clear.addEventListener('click', ()=>{
 res = '0';
 display.value = res;
 });
 
-
-
 delLast.addEventListener('click', ()=>{
     display.value = display.value.slice(0,-1);
     if(display.value == ""){
-      display.value = "0"
-    }
+      display.value = "0";
+    };
 });
-
-
 
 punctBtn.addEventListener('click', ()=>{
     if(!res.includes(".")){
@@ -70,8 +64,3 @@ punctBtn.addEventListener('click', ()=>{
       display.value += punctBtn.value;
     };
   });
-
-
- const date = new Date();
-        let year = date.getFullYear();
-      const an = document.getElementById("an").textContent = year + " @eduardbede ";
