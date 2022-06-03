@@ -1,3 +1,3 @@
 # calculator
 
-@eduardbede Calculator Project Final Update
+@eduardbede Calculator Project Update
